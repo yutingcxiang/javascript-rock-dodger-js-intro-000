@@ -48,14 +48,15 @@ function createRock(x) {
   GAME.appendChild(rock);
 
   function moveRock() {
-    if(checkCollision(rock)) {
-       endGame();
-    }
-    if (top < GAME_HEIGHT) {
-        window.requestAnimationFrame(rock);
-      } else {
-        rock.remove();
-      }
+    rock.style.top = `${top += 2}px`;
+     if(checkCollision(rock)) {
+       return endGame();
+     }
+     if(top < GAME_HEIGHT) {
+       window.requestAnimationFrame(rock);
+     } else {
+       rock.remove();
+     }
   }
   window.requestAnimationFrame(moveRock);
   ROCKS.push(rock)
