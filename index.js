@@ -91,7 +91,7 @@ function moveDodgerLeft() {
 
 function moveDodgerRight() {
   window.requestAnimationFrame(function() {
-    
+    if (position)
   })
   // implement me!
   /**
