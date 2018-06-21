@@ -90,7 +90,9 @@ function moveDodgerLeft() {
 }
 
 function moveDodgerRight() {
-  window.requestAnimationFram()
+  window.requestAnimationFrame(function() {
+    
+  })
   // implement me!
   /**
    * This function should move DODGER to the right
